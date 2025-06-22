@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Phone, MessageCircle } from 'lucide-react';
 
 const FloatingIcons = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -18,15 +19,15 @@ const FloatingIcons = () => {
     {
       type: 'phone',
       number: '01080865555',
-      icon: '📞',
-      bgColor: 'bg-blue-500 hover:bg-blue-600',
+      icon: Phone,
+      bgColor: 'bg-medical-blue hover:bg-medical-navy',
       label: 'اتصل بنا'
     },
     {
       type: 'whatsapp',
       number: '01080184444',
-      icon: '📱',
-      bgColor: 'bg-green-500 hover:bg-green-600',
+      icon: MessageCircle,
+      bgColor: 'bg-medical-green hover:bg-medical-teal',
       label: 'واتساب'
     }
   ];
@@ -42,37 +43,33 @@ const FloatingIcons = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed left-4 bottom-4 z-50 space-y-3 animate-fade-in-left">
+    <div className="fixed right-4 bottom-4 z-50 space-y-3 animate-fade-in-left">
       {contacts.map((contact, index) => (
         <button
           key={index}
           onClick={() => handleContact(contact.type, contact.number)}
           className={`
             group relative w-14 h-14 ${contact.bgColor} rounded-full shadow-lg 
-            flex items-center justify-center text-white text-xl
-            transition-all duration-300 transform hover:scale-110 animate-float
+            flex items-center justify-center text-white
+            transition-all duration-300 transform hover:scale-110
             hover:shadow-xl
           `}
-          style={{ animationDelay: `${index * 0.5}s` }}
           title={contact.label}
         >
-          <span className="animate-pulse-glow">{contact.icon}</span>
+          <contact.icon className="w-6 h-6" />
           
           {/* Tooltip */}
           <div className="
-            absolute right-16 top-1/2 transform -translate-y-1/2
-            bg-gray-900 text-white text-sm px-3 py-2 rounded-lg
+            absolute left-16 top-1/2 transform -translate-y-1/2
+            bg-medical-gray-900 text-white text-sm px-3 py-2 rounded-lg
             opacity-0 group-hover:opacity-100 transition-opacity duration-300
             whitespace-nowrap pointer-events-none
           ">
             {contact.label}
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 translate-x-full">
-              <div className="w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-gray-900"></div>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-full">
+              <div className="w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent border-l-medical-gray-900"></div>
             </div>
           </div>
-
-          {/* Ripple effect */}
-          <div className="absolute inset-0 rounded-full animate-ping opacity-20 bg-white"></div>
         </button>
       ))}
     </div>

@@ -1,10 +1,10 @@
 
 import { Button } from '@/components/ui/button';
-import { Heart, Shield, Award, Clock, CheckCircle } from 'lucide-react';
+import { Stethoscope, ShieldCheck, Award, Clock, CheckCircle, FlaskConical } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-teal-50 flex items-center pt-16">
+    <section id="home" className="min-h-screen bg-gradient-to-br from-medical-softBlue via-white to-medical-softGreen flex items-center pt-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -14,7 +14,7 @@ const HeroSection = () => {
                 <Award className="w-6 h-6" />
                 <span className="text-sm font-medium">معتمد وموثوق</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight text-shadow-medical">
+              <h1 className="text-4xl md:text-6xl font-bold text-medical-gray-900 leading-tight text-shadow-soft">
                 معامل{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-green">
                   اسواب
@@ -22,7 +22,7 @@ const HeroSection = () => {
                 <br />
                 للتحاليل الطبية
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-medical-gray-600 leading-relaxed">
                 أعلى دقة في النتائج • أحدث أجهزة التحاليل • فريق طبي متخصص
                 <br />
                 اطمئن على صحتك مع أفضل معامل التحاليل الطبية في مصر
@@ -35,31 +35,31 @@ const HeroSection = () => {
                 <div className="w-10 h-10 bg-medical-blue/10 rounded-full flex items-center justify-center">
                   <CheckCircle className="w-5 h-5 text-medical-blue" />
                 </div>
-                <span className="text-gray-700 font-medium">نتائج دقيقة ومضمونة</span>
+                <span className="text-medical-gray-700 font-medium">نتائج دقيقة ومضمونة</span>
               </div>
               <div className="flex items-center space-x-reverse space-x-3">
                 <div className="w-10 h-10 bg-medical-green/10 rounded-full flex items-center justify-center">
                   <Clock className="w-5 h-5 text-medical-green" />
                 </div>
-                <span className="text-gray-700 font-medium">استلام سريع للنتائج</span>
+                <span className="text-medical-gray-700 font-medium">استلام سريع للنتائج</span>
               </div>
               <div className="flex items-center space-x-reverse space-x-3">
                 <div className="w-10 h-10 bg-medical-teal/10 rounded-full flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-medical-teal" />
+                  <ShieldCheck className="w-5 h-5 text-medical-teal" />
                 </div>
-                <span className="text-gray-700 font-medium">أجهزة حديثة ومعايرة</span>
+                <span className="text-medical-gray-700 font-medium">أجهزة حديثة ومعايرة</span>
               </div>
               <div className="flex items-center space-x-reverse space-x-3">
-                <div className="w-10 h-10 bg-medical-purple/10 rounded-full flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-medical-purple" />
+                <div className="w-10 h-10 bg-medical-navy/10 rounded-full flex items-center justify-center">
+                  <Stethoscope className="w-5 h-5 text-medical-navy" />
                 </div>
-                <span className="text-gray-700 font-medium">عناية فائقة بالمرضى</span>
+                <span className="text-medical-gray-700 font-medium">عناية فائقة بالمرضى</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-medical-blue to-medical-green hover:from-medical-green hover:to-medical-blue text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
+              <Button size="lg" className="bg-gradient-to-r from-medical-blue to-medical-green hover:from-medical-navy hover:to-medical-teal text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
                 احجز تحليلك الآن
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-medical-blue text-medical-blue hover:bg-medical-blue hover:text-white px-8 py-4 rounded-full transition-all duration-300">
@@ -68,38 +68,25 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image/Animation Side */}
+          {/* Image Side */}
           <div className="relative animate-fade-in-left">
             <div className="relative">
-              {/* Main Illustration */}
-              <div className="w-full h-96 bg-gradient-to-br from-medical-blue/10 via-medical-green/10 to-medical-teal/10 rounded-3xl flex items-center justify-center animate-float">
-                <div className="grid grid-cols-3 gap-6 p-8">
-                  {/* Medical Icons Animation */}
-                  {[
-                    { icon: Heart, color: 'text-medical-red', delay: '0s' },
-                    { icon: Shield, color: 'text-medical-blue', delay: '0.5s' },
-                    { icon: Award, color: 'text-medical-green', delay: '1s' },
-                    { icon: Clock, color: 'text-medical-orange', delay: '1.5s' },
-                    { icon: CheckCircle, color: 'text-medical-purple', delay: '2s' },
-                    { icon: Heart, color: 'text-medical-teal', delay: '2.5s' },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className={`w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center animate-pulse-glow`}
-                      style={{ animationDelay: item.delay }}
-                    >
-                      <item.icon className={`w-8 h-8 ${item.color}`} />
-                    </div>
-                  ))}
-                </div>
+              {/* Medical Lab Image */}
+              <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="معمل التحاليل الطبية - أجهزة حديثة"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-medical-blue/20 to-transparent"></div>
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-medical-blue to-medical-green rounded-full flex items-center justify-center animate-float shadow-xl">
-                <Heart className="w-10 h-10 text-white" />
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-medical-blue to-medical-green rounded-full flex items-center justify-center shadow-xl">
+                <FlaskConical className="w-10 h-10 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-medical-green to-medical-teal rounded-full flex items-center justify-center animate-float shadow-xl" style={{ animationDelay: '1s' }}>
-                <Shield className="w-8 h-8 text-white" />
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-medical-green to-medical-teal rounded-full flex items-center justify-center shadow-xl">
+                <Stethoscope className="w-8 h-8 text-white" />
               </div>
             </div>
           </div>

@@ -1,12 +1,12 @@
 
-import { Heart, MapPin, Award, Shield } from 'lucide-react';
+import { FlaskConical, MapPin, Award, ShieldCheck, Phone, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
     { name: 'الرئيسية', href: '#home' },
     { name: 'خدماتنا', href: '#services' },
     { name: 'عن المعمل', href: '#about' },
-    { name: 'الباقات', href: '#packages' },
+    { name: 'آراء العملاء', href: '#testimonials' },
     { name: 'تواصل معنا', href: '#contact' }
   ];
 
@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16">
+    <footer className="bg-gradient-to-b from-medical-gray-900 to-medical-gray-800 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
@@ -28,11 +28,11 @@ const Footer = () => {
           <div className="lg:col-span-1 space-y-6 animate-fade-in-up">
             <div className="flex items-center space-x-reverse space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-medical-blue to-medical-green rounded-lg flex items-center justify-center animate-pulse-glow">
-                  <Heart className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-medical-blue to-medical-green rounded-lg flex items-center justify-center">
+                  <FlaskConical className="w-7 h-7 text-white" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-medical-red rounded-full flex items-center justify-center">
-                  <Shield className="w-2 h-2 text-white" />
+                  <ShieldCheck className="w-2 h-2 text-white" />
                 </div>
               </div>
               <div>
@@ -93,8 +93,14 @@ const Footer = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <p className="text-blue-400 font-semibold">📞 للحجز: 01080865555</p>
-                <p className="text-green-400 font-semibold">📱 واتساب: 01080184444</p>
+                <p className="text-blue-400 font-semibold flex items-center space-x-reverse space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>للحجز: 01080865555</span>
+                </p>
+                <p className="text-green-400 font-semibold flex items-center space-x-reverse space-x-2">
+                  <MessageCircle className="w-4 h-4" />
+                  <span>واتساب: 01080184444</span>
+                </p>
               </div>
             </div>
           </div>
@@ -104,15 +110,14 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8 mb-8">
           <div className="flex justify-center items-center space-x-reverse space-x-8 mb-8">
             {[
-              { icon: Heart, color: 'text-red-400' },
-              { icon: Shield, color: 'text-blue-400' },
+              { icon: FlaskConical, color: 'text-red-400' },
+              { icon: ShieldCheck, color: 'text-blue-400' },
               { icon: Award, color: 'text-yellow-400' },
               { icon: MapPin, color: 'text-green-400' }
             ].map((item, index) => (
               <div
                 key={index}
-                className={`w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 animate-float`}
-                style={{ animationDelay: `${index * 0.5}s` }}
+                className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300"
               >
                 <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>

@@ -67,14 +67,27 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				medical: {
-					blue: '#2563eb',
+					blue: '#1e40af',
 					lightBlue: '#3b82f6',
-					green: '#059669',
-					lightGreen: '#10b981',
-					teal: '#0891b2',
+					green: '#16a34a',
+					lightGreen: '#22c55e',
+					teal: '#0f766e',
 					red: '#dc2626',
 					orange: '#ea580c',
 					purple: '#7c3aed',
+					navy: '#1e3a8a',
+					softBlue: '#dbeafe',
+					softGreen: '#dcfce7',
+					gray: {
+						50: '#f8fafc',
+						100: '#f1f5f9',
+						200: '#e2e8f0',
+						300: '#cbd5e1',
+						600: '#475569',
+						700: '#334155',
+						800: '#1e293b',
+						900: '#0f172a'
+					}
 				}
 			},
 			borderRadius: {
@@ -102,7 +115,7 @@ export default {
 				'fade-in-up': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(30px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -112,7 +125,7 @@ export default {
 				'fade-in-down': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(-30px)'
+						transform: 'translateY(-20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -122,7 +135,7 @@ export default {
 				'fade-in-right': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateX(-30px)'
+						transform: 'translateX(-20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -132,27 +145,11 @@ export default {
 				'fade-in-left': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateX(30px)'
+						transform: 'translateX(20px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateX(0)'
-					}
-				},
-				'pulse-glow': {
-					'0%, 100%': {
-						boxShadow: '0 0 5px #3b82f6'
-					},
-					'50%': {
-						boxShadow: '0 0 20px #3b82f6, 0 0 30px #3b82f6'
-					}
-				},
-				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0px)'
-					},
-					'50%': {
-						transform: 'translateY(-10px)'
 					}
 				}
 			},
@@ -162,9 +159,7 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'fade-in-down': 'fade-in-down 0.6s ease-out',
 				'fade-in-right': 'fade-in-right 0.6s ease-out',
-				'fade-in-left': 'fade-in-left 0.6s ease-out',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite',
+				'fade-in-left': 'fade-in-left 0.6s ease-out'
 			}
 		}
 	},
