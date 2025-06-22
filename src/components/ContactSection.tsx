@@ -38,7 +38,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-down">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-reverse space-x-2 mb-4">
             <Heart className="w-8 h-8 text-medical-blue" />
             <span className="text-medical-blue font-semibold">تواصل معنا</span>
@@ -59,11 +59,10 @@ const ContactSection = () => {
           {contactInfo.map((info, index) => (
             <Card
               key={index}
-              className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 medical-card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 medical-card-hover"
             >
               <CardHeader className="text-center">
-                <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center mb-4 animate-pulse-glow`}>
+                <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center mb-4`}>
                   <info.icon className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
@@ -84,9 +83,9 @@ const ContactSection = () => {
         {/* Contact Numbers & Payment */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Contact Numbers */}
-          <Card className="border-0 shadow-lg animate-fade-in-right">
+          <Card className="border-0 shadow-lg">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-teal-500 to-teal-600 flex items-center justify-center mb-4 animate-pulse-glow">
+              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-teal-500 to-teal-600 flex items-center justify-center mb-4">
                 📞
               </div>
               <CardTitle className="text-xl font-bold text-gray-900">
@@ -100,15 +99,22 @@ const ContactSection = () => {
               </div>
               <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl">
                 <h4 className="font-semibold text-gray-900 mb-2">واتساب فقط:</h4>
-                <p className="text-2xl font-bold text-medical-green mb-1">01080184444</p>
+                <a 
+                  href="https://wa.me/+201080184444" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-2xl font-bold text-medical-green mb-1 hover:text-medical-teal transition-colors cursor-pointer"
+                >
+                  01080184444
+                </a>
               </div>
             </CardContent>
           </Card>
 
           {/* Payment Methods */}
-          <Card className="border-0 shadow-lg animate-fade-in-left">
+          <Card className="border-0 shadow-lg">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center mb-4 animate-pulse-glow">
+              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center mb-4">
                 💳
               </div>
               <CardTitle className="text-xl font-bold text-gray-900">
@@ -132,7 +138,7 @@ const ContactSection = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-gradient-to-r from-medical-blue via-medical-green to-medical-teal p-8 rounded-3xl text-white text-center animate-fade-in-up">
+        <div className="bg-gradient-to-r from-medical-blue via-medical-green to-medical-teal p-8 rounded-3xl text-white text-center">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-6">لماذا تختار معامل اسواب؟</h3>
             <div className="grid md:grid-cols-4 gap-6">

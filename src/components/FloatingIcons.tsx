@@ -25,7 +25,7 @@ const FloatingIcons = () => {
     },
     {
       type: 'whatsapp',
-      number: '01080184444',
+      number: '+201080184444',
       icon: MessageCircle,
       bgColor: 'bg-medical-green hover:bg-medical-teal',
       label: 'واتساب'
@@ -43,7 +43,7 @@ const FloatingIcons = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed right-4 bottom-4 z-50 space-y-3 animate-fade-in-left">
+    <div className="fixed left-4 bottom-4 z-50 space-y-3">
       {contacts.map((contact, index) => (
         <button
           key={index}
@@ -60,14 +60,14 @@ const FloatingIcons = () => {
           
           {/* Tooltip */}
           <div className="
-            absolute left-16 top-1/2 transform -translate-y-1/2
+            absolute right-16 top-1/2 transform -translate-y-1/2
             bg-medical-gray-900 text-white text-sm px-3 py-2 rounded-lg
             opacity-0 group-hover:opacity-100 transition-opacity duration-300
             whitespace-nowrap pointer-events-none
           ">
             {contact.label}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-full">
-              <div className="w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent border-l-medical-gray-900"></div>
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 translate-x-full">
+              <div className="w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-medical-gray-900"></div>
             </div>
           </div>
         </button>
