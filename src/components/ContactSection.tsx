@@ -8,8 +8,6 @@ const ContactSection = () => {
       icon: MapPin,
       title: 'عنوان المعمل',
       details: [
-        '58 شارع محيي الدين عبد الحميد',
-        'أمام معهد الألسن - آخر مكرم عبيد',
         'مدينة نصر - القاهرة'
       ],
       color: 'from-blue-500 to-blue-600'
@@ -95,17 +93,17 @@ const ContactSection = () => {
             <CardContent className="space-y-4">
               <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-xl">
                 <h4 className="font-semibold text-gray-900 mb-2">للحجز والاستفسار:</h4>
-                <p className="text-2xl font-bold text-medical-blue mb-1">01080865555</p>
+                <p className="text-2xl font-bold text-medical-blue mb-1">01097933148</p>
               </div>
               <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl">
                 <h4 className="font-semibold text-gray-900 mb-2">واتساب فقط:</h4>
                 <a 
-                  href="https://wa.me/+201080184444" 
+                  href="https://wa.me/+201097933148" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-2xl font-bold text-medical-green mb-1 hover:text-medical-teal transition-colors cursor-pointer"
                 >
-                  01080184444
+                  01097933148
                 </a>
               </div>
             </CardContent>
