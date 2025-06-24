@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
     {
       name: 'مريم يوسف',
       rating: 5,
-      comment: 'أثق في دقة نتائج معمل اسواب دائماً. خدمة عملاء ممتازة ومتابعة مستمرة.',
+      comment: 'أثق في دقة نتائج معمل القاضي دائماً. خدمة عملاء ممتازة ومتابعة مستمرة.',
       service: 'فيتامينات ومعادن'
     }
   ];
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
                       <h4 className="font-semibold text-medical-gray-900 text-sm">
                         {testimonial.name}
                       </h4>
-                      <p className="text-xs text-medical-gray-500">عميل معمل اسواب</p>
+                      <p className="text-xs text-medical-gray-500">عميل معمل القاضي</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const TestimonialsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="text-sm opacity-80">
-                📞 للحجز: 01080865555 | 📱 واتساب: 01080184444
+                📞 للحجز: 01097933148 | 📱 واتساب: 01097933148
               </div>
             </div>
           </div>
