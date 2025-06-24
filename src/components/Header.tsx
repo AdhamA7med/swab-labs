@@ -29,7 +29,7 @@ const Header = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-medical-blue">معامل اسواب</h1>
+              <h1 className="text-xl font-bold text-medical-blue">معامل القاضي</h1>
               <p className="text-xs text-medical-green">للتحاليل الطبية</p>
             </div>
           </div>
