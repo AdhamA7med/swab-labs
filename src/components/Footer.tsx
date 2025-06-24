@@ -36,12 +36,12 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">معامل اسواب</h3>
+                <h3 className="text-2xl font-bold text-white">معامل القاضي</h3>
                 <p className="text-blue-300">للتحاليل الطبية</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              معامل اسواب للتحاليل الطبية - رائدون في تقديم أعلى معايير الدقة والجودة في التحاليل الطبية. 
+              معامل القاضي للتحاليل الطبية - رائدون في تقديم أعلى معايير الدقة والجودة في التحاليل الطبية. 
               نلتزم بصحتكم وراحتكم.
             </p>
             <div className="flex items-center space-x-reverse space-x-2">
@@ -87,8 +87,6 @@ const Footer = () => {
               <div className="flex items-start space-x-reverse space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
-                  <p>58 شارع محيي الدين عبد الحميد</p>
-                  <p>أمام معهد الألسن - آخر مكرم عبيد</p>
                   <p>مدينة نصر - القاهرة</p>
                 </div>
               </div>
