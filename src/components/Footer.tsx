@@ -95,17 +95,17 @@ const Footer = () => {
               <div className="space-y-2">
                 <p className="text-blue-400 font-semibold flex items-center space-x-reverse space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>للحجز: 01080865555</span>
+                  <span>للحجز: 01097933148</span>
                 </p>
                 <p className="text-green-400 font-semibold flex items-center space-x-reverse space-x-2">
                   <MessageCircle className="w-4 h-4" />
                   <a 
-                    href="https://wa.me/+201080184444" 
+                    href="https://wa.me/+201097933148" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="hover:text-green-300 transition-colors"
                   >
-                    واتساب: 01080184444
+                    واتساب: 01097933148
                   </a>
                 </p>
               </div>
