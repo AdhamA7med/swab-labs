@@ -18,14 +18,14 @@ const FloatingIcons = () => {
   const contacts = [
     {
       type: 'phone',
-      number: '01080865555',
+      number: '01097933148',
       icon: Phone,
       bgColor: 'bg-medical-blue hover:bg-medical-navy',
       label: 'اتصل بنا'
     },
     {
       type: 'whatsapp',
-      number: '+201080184444',
+      number: '+201097933148',
       icon: MessageCircle,
       bgColor: 'bg-medical-green hover:bg-medical-teal',
       label: 'واتساب'
