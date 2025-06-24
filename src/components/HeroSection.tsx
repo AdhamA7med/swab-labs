@@ -16,7 +16,7 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-medical-gray-900 leading-tight text-shadow-soft">
                 معامل{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-green">
-                  اسواب
+                  القاضي
                 </span>
                 <br />
                 للتحاليل الطبية
